@@ -32,7 +32,7 @@ func TestNewHumanModel(t *testing.T) {
 		{
 			name: "異常系: nameが空文字",
 			args: args{
-				name: "",
+				name: "ii",
 				age:  20,
 			},
 			want:    nil,
@@ -61,6 +61,7 @@ func TestNewHumanModel(t *testing.T) {
 			if tt.wantErr && err.Error() != tt.errMsg {
 				t.Errorf("NewHumanModel() error message は %v, want %v", err.Error(), tt.errMsg)
 			}
+			// 期待する結果と取得した結果が一致するかどうかを検証
 			if !reflect.DeepEqual(got, tt.want) { //
 				t.Errorf("NewHumanModel() = %v, want %v", got, tt.want)
 			}
