@@ -25,3 +25,5 @@ func model() {
 	// +5された値が出力される
 	fmt.Printf("HogeB(ポインタ型である)の出力結果:%v\n", h.value)
 }
+
+//
